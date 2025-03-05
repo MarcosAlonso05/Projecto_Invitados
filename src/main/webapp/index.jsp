@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Gestión de Invitados</title>
+    <title>Gestion de Invitados</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
