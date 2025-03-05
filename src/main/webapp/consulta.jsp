@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Lista de Invitados</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 <h1>Lista de Invitados</h1>

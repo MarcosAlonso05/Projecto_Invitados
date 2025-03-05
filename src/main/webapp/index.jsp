@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Gestión de Invitados</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 <h1>Bienvenido a la Gestión de Invitados</h1>
