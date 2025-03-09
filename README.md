@@ -42,7 +42,7 @@ para ver directamente en el navegador (archivos html con css y javascript, image
 Si queremos que ejecute un servidor web con contenido dinámico (como es nuestro caso con el `.war`)
 necesitaríamos utilizar el preset de Web Service, que, aunque tiene una version gratuita, no hemos conseguido
 hacer funcionar el Dockerfile con este. Cuando hemos ejecutado el Dockerfile utilizando Docker Desktop en Windows
-en nuestras máquinas en local, ha funcionado sin problema usando los siguiente comandos.
+en nuestras máquinas en local, ha funcionado sin problema usando los siguientes comandos.
 
 ```shell
 docker build --tag "invitados" .
