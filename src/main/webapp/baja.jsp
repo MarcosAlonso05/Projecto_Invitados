@@ -9,7 +9,9 @@
 <body>
 <h1>Eliminar Invitado</h1>
 <nav>
-    <form action="darBaja.jsp" method="post">
+    <form action="BajaController" method="POST">
+        <input type="hidden" name="action" value="baja"/>
+
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <button type="submit">Eliminar</button>

@@ -1,36 +1,15 @@
-<%@ page import="modelo.Invitado" %>
-<%@ page import="modelo.Servicio" %>
-<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Dar de baja</title>
+    <title>Dar de Baja</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-<%
-    String nombre = request.getParameter("nombre");
+<h1>Resultado de la Operación</h1>
 
-    if (nombre != null && !nombre.trim().isEmpty()) {
-        Servicio servicio = new Servicio();
-        servicio.connect();
+<p>${mensaje}</p>
 
-        // Obtener la lista de invitados con ese nombre
-        List<Invitado> invitados = servicio.getInvitadosByNombre(nombre);
-
-        if (invitados != null && !invitados.isEmpty()) {
-            for (Invitado invitado : invitados) {
-                servicio.deleteInvitado(invitado.getId()); // Elimina cada invitado con el nombre dado
-                out.println("<p>Invitado eliminado con éxito: " + invitado.getNombre() + "</p>");
-            }
-        } else {
-            out.println("<p>Error: No se encontró ningún invitado con el nombre '" + nombre + "'.</p>");
-        }
-
-        servicio.disconnect();
-    } else {
-        out.println("<p>Error: El nombre no puede estar vacío.</p>");
-    }
-%>
 <a href="index.jsp">Volver</a>
 </body>
 </html>
