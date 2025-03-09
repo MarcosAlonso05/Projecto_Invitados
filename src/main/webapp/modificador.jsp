@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,14 +7,19 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-<h1>Modificar Invitado</h1>
+<h1>Modificar Nombre de Invitado</h1>
 <nav>
     <form action="darModificacion.jsp" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <label for="nombreActual">Nombre Actual:</label>
+        <input type="text" id="nombreActual" name="nombreActual" required>
+
+        <label for="nuevoNombre">Nuevo Nombre:</label>
+        <input type="text" id="nuevoNombre" name="nuevoNombre" required>
+
         <button type="submit">Modificar</button>
     </form>
 </nav>
-<a href="index.jsp">Modificar</a>
+
+<a href="index.jsp">Volver</a>
 </body>
 </html>

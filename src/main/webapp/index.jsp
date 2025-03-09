@@ -12,6 +12,7 @@
         <li><a href="alta.jsp">Agregar Invitado</a></li>
         <li><a href="baja.jsp">Eliminar Invitado</a></li>
         <li><a href="modificador.jsp">Modificar Invitado</a></li>
+        <li><a href="lista.jsp">Listar Invitado</a></li>
     </ul>
 
 </nav>
