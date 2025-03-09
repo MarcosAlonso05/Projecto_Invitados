@@ -99,3 +99,14 @@ button:hover {
         width: 80%;
     }
 }
+.volver{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}

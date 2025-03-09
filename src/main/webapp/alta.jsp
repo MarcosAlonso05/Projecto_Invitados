@@ -10,14 +10,16 @@
 <body>
 <h1>Agregar Invitado</h1>
 <nav>
-    <form action="AltaController" method="POST">
-        <input type="hidden" name="action" value="alta"/>
+    <div class="contenedor_formulario">
+        <form action="AltaController" method="POST">
+            <input type="hidden" name="action" value="alta"/>
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <button type="submit">Agregar</button>
-    </form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
 </nav>
-<a href="index.jsp">Volver</a>
+<a href="index.jsp" class="volver">Volver</a>
 </body>
 </html>

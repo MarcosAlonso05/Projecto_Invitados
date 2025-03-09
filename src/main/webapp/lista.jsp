@@ -10,7 +10,6 @@
 </head>
 <body>
 <h1>Lista de Todos los Invitados</h1>
-
 <%
     Servicio servicio = new Servicio();
     servicio.connect();
@@ -30,6 +29,6 @@
     servicio.disconnect();
 %>
 
-<a href="index.jsp">Volver</a>
+<a href="index.jsp" class="volver">Volver</a>
 </body>
 </html>

@@ -10,6 +10,6 @@
 
 <p>${mensaje}</p>
 
-<a href="modificador.jsp">Volver</a>
+<a href="modificador.jsp" class="volver">Volver</a>
 </body>
 </html>
