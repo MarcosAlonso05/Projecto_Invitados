@@ -10,7 +10,9 @@
 <body>
 <h1>Agregar Invitado</h1>
 <nav>
-    <form action="darAlta.jsp" method="POST">
+    <form action="AltaController" method="POST">
+        <input type="hidden" name="action" value="alta"/>
+
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <button type="submit">Agregar</button>
