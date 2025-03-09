@@ -20,6 +20,7 @@ public class Servicio {
     public Servicio() {}
 
     public void connect() {
+        if(session != null && session.isConnected()) return;
         if(System.getenv("DATABASE_URL") == null || System.getenv("DATABASE_URL").isEmpty()) {
             throw new RuntimeException("No se ha especificado url de conexión para la base de datos (variable de entorno DATABASE_URL).");
         }
@@ -33,7 +34,7 @@ public class Servicio {
 
         config.setProperty("hibernate.connection.username", System.getenv("DATABASE_USER"));
         config.setProperty("hibernate.connection.password", System.getenv("DATABASE_PASSWORD"));
-        config.setProperty("hibernate.connection.url", System.getenv("DATABASE_URL"));
+        config.setProperty("hibernate.connection.url", "jdbc:postgresql://"+System.getenv("DATABASE_URL"));
         try {
             sessionFactory = config.buildSessionFactory();
         }catch(ServiceException e) {
