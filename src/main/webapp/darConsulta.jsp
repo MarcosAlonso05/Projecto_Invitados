@@ -29,6 +29,6 @@
     }
 %>
 
-<a href="consulta.jsp">Volver</a>
+<a href="consulta.jsp" class="volver">Volver</a>
 </body>
 </html>
