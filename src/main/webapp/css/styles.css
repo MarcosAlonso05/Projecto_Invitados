@@ -44,7 +44,7 @@ nav ul li a:hover {
     background: #4CAF50;
 }
 
-.form-container {
+.contenedor_formulario {
     background: white;
     padding: 20px;
     width: 300px;
@@ -95,7 +95,7 @@ button:hover {
         flex-direction: column;
     }
 
-    .form-container {
+    .contenedor_formulario {
         width: 80%;
     }
 }
