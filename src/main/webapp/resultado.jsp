@@ -8,7 +8,9 @@
 <body>
 <h1>Resultado de la Operación</h1>
 
-<p>${mensaje}</p>
+<%
+    out.println("<p>" + request.getAttribute("mensaje") + "</p>");
+%>
 
 <a href="index.jsp">Volver</a>
 </body>

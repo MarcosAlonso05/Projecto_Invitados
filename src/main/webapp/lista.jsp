@@ -15,7 +15,7 @@
     Servicio servicio = new Servicio();
     servicio.connect();
 
-    List<Invitado> invitados = servicio.getInvitadosByNombre("%");
+    List<Invitado> invitados = servicio.getInvitados();
 
     if (!invitados.isEmpty()) {
         out.println("<ul>");

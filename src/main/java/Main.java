@@ -14,7 +14,11 @@ public class Main {
 //		servicio.saveInvitado(invitado);
 //		System.out.println(invitado);
 
-		System.out.println(servicio.getInvitado(1));
+		Invitado i = servicio.getInvitado(1);
+		System.out.println(i);
+		i.setNombre("Miau");
+		servicio.saveInvitado(i);
+
 		System.out.println(servicio.getInvitadosByNombre("aa"));
 
 		servicio.disconnect();

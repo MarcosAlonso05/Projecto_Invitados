@@ -47,7 +47,7 @@ public class ModificadorController extends HttpServlet {
                 request.setAttribute("mensaje", "Error: Ambos campos son obligatorios.");
             }
 
-            request.getRequestDispatcher("darModificacion.jsp").forward(request, response);
+            request.getRequestDispatcher("resultado.jsp").forward(request, response);
         }
     }
 

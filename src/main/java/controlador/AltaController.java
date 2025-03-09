@@ -42,7 +42,7 @@ public class AltaController extends HttpServlet {
                 request.setAttribute("mensaje", "Error: El nombre no puede estar vacío.");
             }
 
-            request.getRequestDispatcher("darAlta.jsp").forward(request, response);
+            request.getRequestDispatcher("resultado.jsp").forward(request, response);
         }
     }
 

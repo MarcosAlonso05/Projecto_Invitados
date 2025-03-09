@@ -43,7 +43,7 @@ public class BajaController extends HttpServlet {
                 request.setAttribute("mensaje", "Error: El nombre no puede estar vacío.");
             }
 
-            request.getRequestDispatcher("darBaja.jsp").forward(request, response);
+            request.getRequestDispatcher("resultado.jsp").forward(request, response);
         }
     }
 

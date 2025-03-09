@@ -35,6 +35,9 @@ public class Servicio {
 		return (Invitado) session.byId(Invitado.class).load(id);
     }
 
+    public List<Invitado> getInvitados() {
+        return session.createQuery("from INVITADO", Invitado.class).getResultList();
+    }
 
     public List<Invitado> getInvitadosByNombre(String nombre) {
         return session.createQuery("from INVITADO where nombre = :nombre", Invitado.class).setParameter("nombre", nombre).getResultList();
