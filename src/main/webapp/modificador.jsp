@@ -9,7 +9,9 @@
 <body>
 <h1>Modificar Nombre de Invitado</h1>
 <nav>
-    <form action="darModificacion.jsp" method="POST">
+    <form action="ModificadorController" method="POST">
+        <input type="hidden" name="action" value="modificar"/>
+
         <label for="nombreActual">Nombre Actual:</label>
         <input type="text" id="nombreActual" name="nombreActual" required>
 
