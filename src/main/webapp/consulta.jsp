@@ -9,7 +9,9 @@
 <body>
 <h1>Consulta de Invitados</h1>
 <nav>
-    <form action="darConsulta.jsp" method="GET">
+    <form action="ConsultaController" method="GET">
+        <input type="hidden" name="action" value="consulta"/>
+
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <button type="submit">Consultar</button>
