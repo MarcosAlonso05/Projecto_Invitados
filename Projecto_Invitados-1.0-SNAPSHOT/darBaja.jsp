@@ -10,6 +10,6 @@
 
 <p>${mensaje}</p>
 
-<a href="index.jsp">Volver</a>
+<a href="index.jsp" class="volver">Volver</a>
 </body>
 </html>
