@@ -5,10 +5,9 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">root</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/invitados?createDatabaseIfNotExist=true</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">neondb_owner</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://ep-aged-snow-a837dr9h.eastus2.azure.neon.tech/neondb?sslmode=require</property>
         <mapping class="modelo.Invitado"></mapping>
     </session-factory>
 </hibernate-configuration>

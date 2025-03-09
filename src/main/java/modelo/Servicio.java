@@ -4,6 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.service.spi.ServiceException;
 
 import java.util.List;
 
@@ -19,8 +20,25 @@ public class Servicio {
     public Servicio() {}
 
     public void connect() {
+        if(System.getenv("DATABASE_URL") == null || System.getenv("DATABASE_URL").isEmpty()) {
+            throw new RuntimeException("No se ha especificado url de conexión para la base de datos (variable de entorno DATABASE_URL).");
+        }
+        if(System.getenv("DATABASE_USER") == null || System.getenv("DATABASE_USER").isEmpty()) {
+            throw new RuntimeException("No se ha especificado usuario para la base de datos (variable de entorno DATABASE_USER).");
+        }
+        if(System.getenv("DATABASE_PASSWORD") == null || System.getenv("DATABASE_PASSWORD").isEmpty()) {
+            throw new RuntimeException("No se ha especificado contraseña para la base de datos (variable de entorno DATABASE_PASSWORD).");
+        }
         Configuration config = new Configuration().configure();
-        sessionFactory = config.buildSessionFactory();
+
+        config.setProperty("hibernate.connection.username", System.getenv("DATABASE_USER"));
+        config.setProperty("hibernate.connection.password", System.getenv("DATABASE_PASSWORD"));
+        config.setProperty("hibernate.connection.url", System.getenv("DATABASE_URL"));
+        try {
+            sessionFactory = config.buildSessionFactory();
+        }catch(ServiceException e) {
+            throw new RuntimeException("La url o contraseña para la base de datos es incorrecta.");
+        }
         session = sessionFactory.openSession();
     }
 

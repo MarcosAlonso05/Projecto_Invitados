@@ -6,9 +6,9 @@ public class Main {
 		Servicio servicio = new Servicio();
 		servicio.connect();
 
-//		Invitado invitado = new Invitado("aa");
-//		servicio.saveInvitado(invitado);
-//		System.out.println(invitado);
+		Invitado invitado = new Invitado("Nya~");
+		servicio.saveInvitado(invitado);
+		System.out.println(invitado);
 //
 //		invitado = new Invitado("bb");
 //		servicio.saveInvitado(invitado);
